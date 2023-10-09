@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="css/if.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+	<h1>Some Memorable Movies</h1>
+<h3><span class="ital">it_is_the_same.mp4</span> (Nicholas 'Nico' Otero, 2023)</h3>
+	
+	<div class="sideBySide">
+	<img class="filmStill" onClick="onClick_TMM_img01()" src="images/it_is_the_same.mp4_01.jpeg" alt="Title card">
+	<img class="filmStill" onClick="onClick_TMM_img02()" src="images/it_is_the_same.mp4_02.jpeg" alt="eyes">
+	<img class="filmStill" onClick="onClick_TMM_img03()" src="images/it_is_the_same.mp4_03.jpeg" alt="middle">
+	</div>
+	
+	<p class="filmInfo" id="TMM_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, illo ad? Eligendi earum omnis, ipsam maxime ullam placeat consectetur, expedita voluptates repudiandae laborum quidem sed ipsa asperiores officia, dignissimos debitis animi enim ducimus dolorum nemo. Quibusdam, molestias praesentium ad perspiciatis tenetur nemo quidem? Odio in, est necessitatibus. Vero, neque eaque.</p>
+	<button type="button" onClick="gotoMovie()" id="gotoMovie_btn"> Go to the Movie</button>
+
+	
+</body>
+<script>
+
+	// it_is_the_same.mp4 section ***************************************************
+var gotoMovie_btn = document.getElementById("gotoMovie_btn");
+gotoMovie_btn.style.visibility = "hidden";
+
+var img01_clicked = false;
+var img02_clicked = false;
+var img03_clicked = false;
+
+var TMM_text = document.getElementById("TMM_text");	
+	
+TMM_text.innerHTML = "it_is_the_same.mp4 was my first film for my 181 class. Our task was supposed to be to make a film about your everyday life and make it interesting or different from how others would perceive it. Another task was to just film and not have a set plan. My end result was an old VHS-style, Mandella catalog-type thing with robotic voices, grainy images, and tons of static.";
+
+var TMM01 = "This was the ending screen. A main theme I was going for was repetition. I repeated phrases, images, and videos throughout the film, hence the name It is the Same. I gave it the mp4 name to make the video look like lost media—an unknown source kind of thing."
+
+var TMM02 = "The eyes were another part of the video, near the end. Throughout the film, for any pictures or videos of people I had found, I covered their eyes, with the only eyes being an extreme close up and some sad-looking. I was tired of repetition at this point in my life. Starting from this point, I vowed to do new things."
+
+var TMM03 = "This is where one of the robotic voices came from. I had to use an AI robot voice recorder to get the right narrator. It would ONLY take what I wrote and say it back to me; it did not do anything else. It was perfect for what I wanted—a little cliche, but it worked."
+	
+function onClick_TMM_img01 (){
+	TMM_text.innerHTML = TMM01;
+	img01_clicked = true;
+	console.log("img01_clicked = " + img01_clicked);
+	revealButton();
+}
+function onClick_TMM_img02 (){
+	TMM_text.innerHTML = TMM02;
+	img02_clicked = true;
+	console.log("img02_clicked = " + img02_clicked);
+	revealButton();
+}
+function onClick_TMM_img03 (){
+	TMM_text.innerHTML = TMM03;
+	img03_clicked = true
+	console.log("img03_clicked = " + img03_clicked);
+	revealButton();
+}
+
+function revealButton(){
+	if (img01_clicked && img02_clicked && img03_clicked){
+		console.log("reveal button")
+		gotoMovie_btn.style.visibility = "visible";
+	}
+}
+function gotoMovie(){
+	window.open("https://www.youtube.com/watch?v=7EuZUzey0HE", "_blank")
+}
+</script>
+</html>
