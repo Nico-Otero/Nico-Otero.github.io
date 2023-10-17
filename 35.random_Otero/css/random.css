@@ -1,0 +1,9 @@
+@charset "UTF-8";
+.covers {
+    width: 400px;
+    border-style: solid;
+    /* [disabled]display: flex; */
+}
+.sideBySide {
+    display: flex;
+}
