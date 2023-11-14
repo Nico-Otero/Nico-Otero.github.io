@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>37.Truisms</title>
+<link href="css/Truisims.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div>
+  <video id="displayed_video" src="video/IMG_4083.mp4" muted="muted" autoplay="autoplay" loop="loop" ></video>
+</div>
+
+<div class="centered_text">
+<h1 id="truism" onmouseover="OnTruismText()" onMouseOut="outTruismText()" onClick="changeVideo()">ENJOY YOURSELF BECAUSE YOU CAN'T CHANGE ANYTHING ANYWAY</h1>
+</div>
+	
+<script>
+
+var channel = 1;
+var pausedAt = 0;
+	//references to video element
+	
+var displayed_video = document.getElementById("displayed_video");
+	
+	//sound stuff
+var mySound = new Audio("sound/Outlast soundtrack-Someone playing piano.mp3")
+	
+	// references to the videos
+
+var makeUp = "video/IMG_4083.mp4";
+var razor = "video/IMG_4173.mp4";
+
+function OnTruismText(){
+	document.getElementById("displayed_video").style.filter = "invert(100%)";
+}
+function outTruismText(){
+	document.getElementById("displayed_video").style.filter = "invert(0%)";
+}
+function changeVideo(){
+	console.log("will change video");
+	pausedAt = displayed_video.currentTime;
+	if (channel == 0){
+		displayed_video.src = makeUp;
+		displayed_video.currentTime = pausedAt;
+		channel = 1;
+	}
+	else{
+		displayed_video.src = razor;
+		displayed_video.currentTime = pausedAt;
+		channel = 0;
+	}
+	mySound.play();
+}
+</script>
+</body>
+</html>
