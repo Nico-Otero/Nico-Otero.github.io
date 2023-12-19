@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Talk to friend simulator</title>
+<link href="css/CYOA_sample.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<!-- THE TITLE ABOVE THE VIDEO -->
+
+<h1>Talk to friend simulator!</h1>
+
+<!-- THE VIDEO -->
+
+<div class = "vidCenter">
+  <video id="displayedVideo" preload="auto" controls="controls" >
+    <source src="video/Opening.mp4" type="video/mp4">
+  </video>
+</div>
+
+<!-- THE CAPTION or PARAGRAPH UNDERNEATH THE VIDEO -->
+<!-- this appears when the video reaches its end -->
+
+<div id="caption">
+<h2>Oh no! You're friend entered you're house unannounced! How will you react to them? How you react to them will change the story.</h2>
+</div>
+
+<!-- THE TWO BUTTONS UNDERNEATH THE CAPTION - CAN EASILY ADD MORE BUTTONS -->
+<!-- these appear when the video reaches its end -->
+
+<div id="DIVforButtons">
+<p>
+<button1 id="leftBTN" onClick="buttonOne()">Im doing good! How about you?</button1>  
+</p>    
+<p>
+<button2 id="rightBTN" onClick="buttonTwo()">Why the hell are you here?</button2>
+<p>
+<button3 id="topBTN" onClick="buttonThree()">Get out!</button3> 
+</p>
+</p>
+</div>
+
+
+
+<script>
+
+    document.getElementById('displayedVideo').addEventListener('ended',whenVideoEnds,false);
+        
+    var topBTN = document.getElementById("topBTN");
+    var leftBTN = document.getElementById("leftBTN");
+	var rightBTN = document.getElementById("rightBTN"); 
+ 
+	
+    var caption = document.getElementById("caption");    
+
+    caption.style.display = 'none';    
+    topBTN.style.display = 'none';
+    leftBTN.style.display = 'none';
+	rightBTN.style.display = 'none';  
+
+    function whenVideoEnds(e) {
+		// these three commands make the caption and the 2 buttons visible
+        caption.style.display = 'block';    
+        topBTN.style.display = 'block';
+        leftBTN.style.display = 'block';
+		rightBTN.style.display = 'block';
+    }
+        
+		// MAKE SURE THE WINDOW OPENS THE FILE NAME on YOUR DIRECTORY 
+		// Lines 63 and 64 are the only places you have to make a change
+    function buttonOne() {
+        window.open ('scene1_goodChoice1.html','_self',false)
+    }
+        
+    function buttonTwo() {
+        window.open ('scene1_badChoice1.html','_self',false)
+    }
+	function buttonThree() {
+		window.open ('scene1_ending3.html','_self', false)
+	}
+        
+</script>
+    
+</body>
+</html>

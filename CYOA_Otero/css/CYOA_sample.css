@@ -1,0 +1,116 @@
+@charset "utf-8";
+h1 {
+    text-align: center;
+    text-decoration: underline overline;
+    text-decoration-style: wavy;
+    text-decoration-color: darkmagenta;
+    text-indent: inherit;
+    color: #601D7F;
+	user-select: none;
+}
+.vidCenter {
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+#displayedVideo {
+	width: 100%;
+	max-height: 600px;
+	object-fit: cover;
+}
+
+h2 {
+    position: relative;
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    margin-top: 0vh;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: x-large;
+    text-align: center;
+    background-color: #D1A2FA;
+    border-style: solid;
+    border-width: thin;
+	user-select: none;
+}
+button1 {
+    color: #000000;
+    background-color: #1E23FF;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-size: x-large;
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    border-style: solid;
+    border-width: thin;
+	user-select: none;
+}
+button2 {
+    width: 200px;
+    height: 50px;
+    background-color: #FC2226;
+    text-align: center;
+    font-size: x-large;
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    color: #000000;
+    border-style: solid;
+    border-width: thin;
+	user-select: none;
+}
+button3 {
+    background-color: #30ED49;
+    width: 200px;
+    height: 25px;
+    text-align: center;
+    font-size: x-large;
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    color: #000000;
+    border-style: solid;
+    border-width: thin;
+	user-select: none;
+}
+button4 {
+    width: 200px;
+    height: 25px;
+    text-align: center;
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    font-size: x-large;
+    color: #000000;
+    background-color: #990608;
+    border-width: thin;
+    border-style: solid;
+}
+button5 {
+    width: 200px;
+    height: 25px;
+    border-width: thin;
+    border-style: solid;
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    font-size: x-large;
+    text-align: center;
+    background-color: #2E32E9;
+    user-select: none;
+}
+Button6 {
+	    color: #000000;
+    background-color: #1E23FF;
+    width: 400px;
+    height: 50px;
+    text-align: center;
+    font-size: x-large;
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    border-style: solid;
+    border-width: thin;
+	user-select: none;
+}
+Button7 {
+	width: 300px;
+    height: 50px;
+    background-color: #FC2226;
+    text-align: center;
+    font-size: x-large;
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    color: #000000;
+    border-style: solid;
+    border-width: thin;
+	user-select: none;
+}

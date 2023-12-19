@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Talk to friend simulator</title>
+<link href="css/CYOA_sample.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+<!-- THE VIDEO -->
+
+<div class = "vidCenter">
+  <video id="displayedVideo" preload="auto" controls="controls" >
+    <source src="video/Bigchoice.mp4" type="video/mp4">
+  </video>
+</div>
+
+<!-- THE CAPTION or PARAGRAPH UNDERNEATH THE VIDEO -->
+<!-- this appears when the video reaches its end -->
+
+<div id="caption">
+<h2>Your friend is wondering if you are still friends with each other, are you? How will you respond?</h2>
+</div>
+
+<!-- THE TWO BUTTONS UNDERNEATH THE CAPTION - CAN EASILY ADD MORE BUTTONS -->
+<!-- these appear when the video reaches its end -->
+
+<div id="DIVforButtons">
+<p>
+<button1 id="topBTN" onClick="buttonOne()">Yea man! I'll talk to you later!</button1>  
+</p>    
+<p>
+<button2 id="leftBTN" onClick="buttonTwo()">No, get out of my house.</button2>
+</p>
+</div>
+
+<script>
+
+    document.getElementById('displayedVideo').addEventListener('ended',whenVideoEnds,false);
+        
+    var topBTN = document.getElementById("topBTN");
+    var leftBTN = document.getElementById("leftBTN");
+   
+    var caption = document.getElementById("caption");    
+
+    caption.style.display = 'none';    
+    topBTN.style.display = 'none';
+    leftBTN.style.display = 'none'; 
+
+    function whenVideoEnds(e) {
+		// these three commands make the caption and the 2 buttons visible
+        caption.style.display = 'block';    
+        topBTN.style.display = 'block';
+        leftBTN.style.display = 'block';
+    }
+        
+		// MAKE SURE THE WINDOW OPENS THE FILE NAME on YOUR DIRECTORY 
+		// Lines 63 and 64 are the only places you have to make a change
+    function buttonOne() {
+        window.open ('scene1_Ending1.html','_self',false)
+    }
+        
+    function buttonTwo() {
+        window.open ('scene1_Ending2.html','_self',false)
+    }
+
+        
+</script>
+    
+</body>
+</html>

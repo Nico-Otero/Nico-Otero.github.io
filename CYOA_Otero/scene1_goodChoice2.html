@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Talk to friend simulator</title>
+<link href="css/CYOA_sample.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+<!-- THE VIDEO -->
+
+<div class = "vidCenter">
+  <video id="displayedVideo" preload="auto" controls="controls">
+    <source src="video/GoodChoiceResult2.mp4" type="video/mp4">
+  </video>
+</div>
+
+<!-- THE CAPTION or PARAGRAPH UNDERNEATH THE VIDEO -->
+<!-- this appears when the video reaches its end -->
+
+<div id="caption">
+<h2>Your friend seems sadden by this news, but understands. Your friend will remember that.</h2>
+</div>
+
+<!-- THE TWO BUTTONS UNDERNEATH THE CAPTION - CAN EASILY ADD MORE BUTTONS -->
+<!-- these appear when the video reaches its end -->
+
+<div id="DIVforButtons">
+<p>
+<button5 id="topBTN" onClick="buttonOne()">Continue.</button5>  
+</p>    
+</div>
+
+<script>
+
+    document.getElementById('displayedVideo').addEventListener('ended',whenVideoEnds,false);
+        
+    var topBTN = document.getElementById("topBTN");
+   
+    var caption = document.getElementById("caption");    
+
+    caption.style.display = 'none';    
+    topBTN.style.display = 'none';       
+
+    function whenVideoEnds(e) {
+		// these three commands make the caption and the 2 buttons visible
+        caption.style.display = 'block';    
+        topBTN.style.display = 'block';
+    }
+        
+		// MAKE SURE THE WINDOW OPENS THE FILE NAME on YOUR DIRECTORY 
+		// Lines 63 and 64 are the only places you have to make a change
+    function buttonOne() {
+		window.open('sorryIntrued.html', '_self', false);
+		//window.open ('scene1_1.html','_self',false)
+		//once you make the next HTML file, put it in line 65 and uncomment that line
+		//MAKE SURE TO COMMENT OUT or REMOVE the alerts
+    }
+        
+        
+</script>
+    
+</body>
+</html>
